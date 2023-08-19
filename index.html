@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập JS nâng cao</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="w-50 m-auto">
+    <!-- BÀI 1 -->
+    <div class="container mt-5">
+        <h1>Tìm ngày tiếp theo và ngày trước đó</h1>
+        <div class="row">
+            <div class="col">
+                <h3>Nhập ngày:</h3>
+                <form id="formNgay">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="ngay">Ngày:</label>
+                            <input type="number" class="form-control" id="ngay" min="1" max="31">
+                        </div>
+                        <div class="col">
+                            <label for="thang">Tháng:</label>
+                            <input type="number" class="form-control" id="thang" min="1" max="12">
+                        </div>
+                        <div class="col">
+                            <label for="nam">Năm:</label>
+                            <input type="number" class="form-control" id="nam" min="1">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Tìm</button>
+                </form>
+            </div>
+            <div class="col">
+                <h3>Kết quả:</h3>
+                <p id="ngayTruocDo" class="lead"></p>
+                <p id="ngayTiepTheo" class="lead"></p>
+            </div>
+        </div>
+    </div>
+    <!--/ BÀI 1 -->
+    <!-- -------------------------------------------------- -->
+    <!-- BÀI 2 -->
+    <div class="container mt-5">
+        <h1>Tính số ngày trong tháng</h1>
+        <div class="row">
+            <div class="col">
+                <h3>Nhập tháng và năm:</h3>
+                <form id="formThangNam">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="thang">Tháng:</label>
+                            <input type="number" class="form-control" id="thangg" min="1" max="12">
+                        </div>
+                        <div class="col">
+                            <label for="nam">Năm:</label>
+                            <input type="number" class="form-control" id="namm" min="1">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Tìm</button>
+                </form>
+            </div>
+            <div class="col">
+                <h3>Kết quả:</h3>
+                <p id="soNgayTrongThang" class="lead"></p>
+            </div>
+        </div>
+    </div>
+    <!--/ BÀI 2 -->
+    <!-- -------------------------------------------------- -->
+    <!-- BÀI 3 -->
+    <div class="container mt-5">
+        <h1>Chương trình đọc số nguyên</h1>
+        <div class="row">
+            <div class="col">
+                <form action="">
+                    <div class="from-row">
+                        <label for="soNguyen">Nhập số nguyên có 3 chữ số:</label>
+                        <input type="number" id="soNguyen" class="form-control">
+                        <button id="btnTinh" class="btn btn-primary mt-3">Đọc</button>
+                        <p id="ketQua"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--/ BÀI 3 -->
+
+
+    <!-- -------------------------------------------------- -->
+    <!-- BÀI 4 -->
+    <div class="container mt-5">
+        <h1>Tìm sinh viên xa trường nhất</h1>
+        <div class="row">
+            <div class="col">
+                <h3>Danh sách sinh viên:</h3>
+                <ul id="sinhVienList" class="list-group"></ul>
+            </div>
+            <div class="col">
+                <h3>Sinh viên xa trường nhất:</h3>
+                <p id="sinhVienXaTruong" class="lead"></p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h3>Thêm sinh viên:</h3>
+                <form id="formSinhVien">
+                    <div class="form-group">
+                        <label for="tenSinhVien">Tên sinh viên:</label>
+                        <input type="text" class="form-control" id="tenSinhVien">
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="latitude">Vĩ độ GPS:</label>
+                            <input type="number" step="any" class="form-control" id="latitude">
+                        </div>
+                        <div class="col">
+                            <label for="longitude">Kinh độ GPS:</label>
+                            <input type="number" step="any" class="form-control" id="longitude">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Thêm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/ BÀI 4 -->
+    <!-- -------------------------------------------------- -->
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
